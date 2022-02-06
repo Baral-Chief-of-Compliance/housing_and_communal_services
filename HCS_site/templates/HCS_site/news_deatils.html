@@ -1,3 +1,18 @@
+{% extends 'HCS_site/base.html' %}
+
+
+{% block content %}
+
 <h1>Описание новости</h1>
 
 {{object.name_of_news}}
+
+<h2>Комментарии:</h2>
+<form action = "{% url 'add_comment' object.id %}" method="post">
+  {% csrf_token %}
+  <input id = "your_name" type="text" placeholder="Ваше имя"><br>
+  <input id = "your_text" type="text" placeholder="Ваш комментарий">
+  <input type="submit" value="Отправить">
+</form>
+
+{% endblock %}

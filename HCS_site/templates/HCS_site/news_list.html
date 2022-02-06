@@ -1,8 +1,15 @@
-<h1>Новости</h1
+{% extends 'HCS_site/base.html' %}
+
+
+{% block content %}
+
+<h1>Новости</h1>
 
 
 {% for news in object_list %}
 
-<a href="{{news.id/}}">{{news.name_of_news}}</a>
+<a href="{{news.id}}/">{{news.name_of_news}}</a>
 
 {% endfor %}
+
+{% endblock %}

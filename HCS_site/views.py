@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect
 from django.views.generic import View, ListView, DetailView
 from .models import News, Announcement
+from django.http import HttpResponseRedirect
+from .forms import CommentForm
 
 # Create your views here.
 
@@ -34,7 +36,9 @@ class AnnouncementDetails(DetailView):
     template_name = "HCs_site/announcement_details.html"
 
 
+
 class AddComment(View):
+
     def post(self, request, pk):
         print(request.POST)
         return redirect("/")

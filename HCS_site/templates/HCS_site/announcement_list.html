@@ -1,6 +1,13 @@
+{% extends 'HCS_site/base.html' %}
+
+
+{% block content %}
+
 <h1>Объявления</h1>
 {% for announcement in object_list %}
 
 <a href = "{{announcement.id}}/">{{announcement.name_of_announcement}}</a>
 
 {% endfor %}
+
+{% endblock %}
