@@ -3,6 +3,7 @@ from django.views.generic import View, ListView, DetailView
 from .models import News, Announcement
 from django.http import HttpResponseRedirect
 from .forms import CommentForm
+from datetime import date
 
 # Create your views here.
 
@@ -41,4 +42,13 @@ class AddComment(View):
 
     def post(self, request, pk):
         print(request.POST)
+        form = CommentForm(request.POST)
+        form.date_of_comment = date.today
+        print("da")
+        if form.is_valid():
+            print("hui")
+            form = form.save(commit=False)
+            form.news_id = pk
+
+            form.save()
         return redirect("/")

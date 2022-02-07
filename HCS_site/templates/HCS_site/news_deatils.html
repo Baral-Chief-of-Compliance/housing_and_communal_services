@@ -8,11 +8,16 @@
 {{object.name_of_news}}
 
 <h2>Комментарии:</h2>
+{% for comment in object.comments_set.all %}
+
+{{ comment.name_of_commenter }}
+
+{% endfor %}
 <form action = "{% url 'add_comment' object.id %}" method="post">
   {% csrf_token %}
-  <input id = "your_name" type="text" placeholder="Ваше имя"><br>
-  <input id = "your_text" type="text" placeholder="Ваш комментарий">
-  <input type="submit" value="Отправить">
+  <input type="text" placeholder="Ваше имя" name = "name_of_commenter"><br>
+  <input type="text" placeholder="Ваш комментарий" name = "text_of_comment">
+  <button type="submit" value="Отправить">OK</button>
 </form>
 
 {% endblock %}
