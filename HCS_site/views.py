@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.views.generic import View, ListView, DetailView
 from .models import News, Announcement
 from django.http import HttpResponseRedirect
-from .forms import CommentForm
+from .forms import CommentForm, ComplaintForm
 from datetime import date
 
 # Create your views here.
@@ -34,21 +34,34 @@ class AnnouncementListView(ListView):
 
 class AnnouncementDetails(DetailView):
     model = Announcement
-    template_name = "HCs_site/announcement_details.html"
+    template_name = "HCS_site/announcement_details.html"
 
 
 
 class AddComment(View):
 
     def post(self, request, pk):
-        print(request.POST)
         form = CommentForm(request.POST)
         form.date_of_comment = date.today
-        print("da")
         if form.is_valid():
-            print("hui")
             form = form.save(commit=False)
             form.news_id = pk
 
+            form.save()
+        return redirect("/")
+
+
+def complaint(request):
+    return render(request, 'HCS_site/complaint.html')
+
+
+
+class AddComplaint(View):
+
+    def post(self, request):
+        form = ComplaintForm(request.POST)
+        form.date_of_complaint = date.today
+        if form.is_valid():
+            form = form.save(commit=False)
             form.save()
         return redirect("/")

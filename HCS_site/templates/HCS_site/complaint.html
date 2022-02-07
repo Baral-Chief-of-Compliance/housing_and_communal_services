@@ -1,0 +1,16 @@
+{% extends 'HCS_site/base.html' %}
+
+
+{% block content %}
+
+<h1>Отправить заявку/жалобу</h1>
+
+<form action = "{% url 'add_complaint' %}" method="post">
+  {% csrf_token %}
+  <input type="text" placeholder="Ваш адресс" name = "address_of_complaint"><br>
+  <input type="text" placeholder="Текст жалобы/заявки" name = "text_of_complaint">
+  <button type="submit" value="Отправить">OK</button>
+</form>
+
+
+{% endblock %}
