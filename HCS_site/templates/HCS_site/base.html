@@ -1,9 +1,106 @@
-<a href="{% url 'index' %}">Главная</a>
-<a href="{% url 'about' %}">О нас</a>
-<a href="{% url 'news_list' %}">Новости</a>
-<a href="{% url 'announcements_list' %}">Объявления</a>
-<a href="{% url 'complaint' %}">Оставить заявку</a>
+{% load static %}
+<!DOCTYPE html>
+<html lang = "ru">
+	<head>
+		<title>{% block title %}{% endblock %} </title>
+		<link rel = "stylesheet" href = "{% static 'HCS_site/style.css' %}" type = "text/css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
+
+		<link rel="apple-touch-icon" sizes="57x57" href="{% static 'Sewing_site/favicon/apple-icon-57x57.png' %}">
+		<link rel="apple-touch-icon" sizes="60x60" href="{% static 'Sewing_site/favicon/apple-icon-60x60.png' %}">
+		<link rel="apple-touch-icon" sizes="72x72" href="{% static 'Sewing_site/favicon/apple-icon-72x72.png' %}">
+		<link rel="apple-touch-icon" sizes="76x76" href="{% static 'Sewing_site/favicon/apple-icon-76x76.png' %}">
+		<link rel="apple-touch-icon" sizes="114x114" href="{% static 'Sewing_site/favicon/apple-icon-114x114.png' %}">
+		<link rel="apple-touch-icon" sizes="120x120" href="{% static 'Sewing_site/favicon/apple-icon-120x120.png' %}">
+		<link rel="apple-touch-icon" sizes="144x144" href="{% static 'Sewing_site/favicon/apple-icon-144x144.png' %}">
+		<link rel="apple-touch-icon" sizes="152x152" href="{% static 'Sewing_site/favicon/apple-icon-152x152.png' %}">
+		<link rel="apple-touch-icon" sizes="180x180" href="{% static 'Sewing_site/favicon/apple-icon-180x180.png' %}">
+		<link rel="icon" type="image/png" sizes="192x192"  href="{% static 'Sewing_site/favicon/android-icon-192x192.png' %}">
+		<link rel="icon" type="image/png" sizes="32x32" href="{% static 'Sewing_site/favicon/favicon-32x32.png' %}">
+		<link rel="icon" type="image/png" sizes="96x96" href="{% static 'Sewing_site/favicon/favicon-96x96.png' %}">
+		<link rel="icon" type="image/png" sizes="16x16" href="{% static 'Sewing_site/favicon/favicon-16x16.png' %}">
+		<link rel="manifest" href="{% static 'Sewing_site/favicon/manifest.json' %}">
+		<meta name="msapplication-TileColor" content="#ffffff">
+		<meta name="msapplication-TileImage" content="{% static 'Sewing_site/favicon/ms-icon-144x144.png' %}">
+		<meta name="theme-color" content="#ffffff">
+	</head>
+  <body>
+    <div class="contacts-header">
+      <div class="contacts-header-imag">
+        <img src="{% static 'HCS_site/img/for_contacts2.png' %}">
+      </div>
+      <div class="contacts-header-text">
+              <a href="#">Контакты</a>
+      </div>
+    </div>
+    <div class="information-header">
+      <div class="information-header-imag">
+        <img src="{% static 'HCS_site/img/for_information.jpg' %}">
+      </div>
+      <div class="information-header-address">
+        Наш адресс:<br><br>
+        г. Мурманск, ул. проспект Кольский д. 12
+      </div>
+      <div class="information-header-numbers">
+        <div class="information-header-row">
+          <div class="information-header-name">
+              <span class="title-number">Офис</span>
+              <div class="information-header-block">
+              <div class="information-header-icon">
+                <img src="{% static 'HCS_site/img/office_icon.png' %}">
+              </div>
+              <div class="information-header-number">
+                +7(666)666-66-60
+              </div>
+          </div>
+          </div>
+          <div class="information-header-name">
+            <span class="title-number">Аварийная служба</span>
+            <div class="information-header-block">
+              <div class="information-header-icon">
+                <img src="{% static 'HCS_site/img/red_icon.png' %}">
+              </div>
+              <div class="information-header-number">
+                +7(148)814-88-00
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="information-header-row">
+          <div class="information-header-name">
+            <span class="title-number">Лифтовая диспетчерская</span>
+            <div class="information-header-block">
+              <div class="information-header-icon">
+                <img src="{% static 'HCS_site/img/lift_icon.png' %}">
+              </div>
+              <div class="information-header-number">
+                +7(777)777-77-77
+              </div>
+            </div>
+          </div>
+          <div class="information-header-name">
+            <span class="title-number">Электрик</span>
+            <div class="information-header-block">
+              <div class="information-header-icon">
+                <img src="{% static 'HCS_site/img/electric_icon.png' %}">
+              </div>
+              <div class="information-header-number">
+                +7(228)228-22-80
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="header-navigation">
+      <a href="{% url 'index' %}">Главная</a>
+      <a href="{% url 'about' %}">О нас</a>
+      <a href="{% url 'news_list' %}">Новости</a>
+      <a href="{% url 'announcements_list' %}">Объявления</a>
+      <a href="{% url 'complaint' %}">Оставить заявку</a>
+    </div>
 
 {% block content %}
 {% endblock %}
+</body>

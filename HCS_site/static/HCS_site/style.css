@@ -1,0 +1,113 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+
+html,body{
+		font-family: 'Open Sans', sans-serif;
+		height: 100%;
+	}
+
+
+.contacts-header{
+  background-color: #edf6ff;
+  display: flex;
+  padding-top: 14px;
+  padding-bottom: 10px;
+}
+
+
+.contacts-header-text{
+  font-size: 17px;
+  margin-left: 12px;
+  padding-top: 3px;
+
+}
+
+
+.contacts-header-text a{
+  color: #027cc9;
+}
+
+
+.contacts-header-imag{
+  margin-left: 75%;
+}
+
+.information-header{
+  margin-top: 25px;
+  margin-bottom: 30px;
+  display: flex;
+}
+
+
+.information-header-address{
+  color: #696969;
+  font-weight: 500;
+  padding-top: 25px;
+  font-size: 12px;
+  font-weight: bold;
+  margin-right: 75px;
+}
+
+
+.information-header-imag{
+  margin-left: 20%;
+  margin-right: 100px;
+}
+
+
+.information-header-numbers{
+  display: flex;
+  display: column;
+}
+
+
+.information-header-number{
+  font-weight: bold;
+  margin-right: 40px;
+  margin-top: 5px;
+}
+
+
+.information-header-block{
+  display: flex;
+}
+
+
+.information-header-name{
+  display: flex;
+  flex-direction: column;
+}
+
+
+.title-number{
+  margin-left: 46px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+
+.information-header-icon{
+  margin-right: 16px;
+
+}
+
+
+.header-navigation{
+  background-color: #0082cc;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+
+.header-navigation a{
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  margin-right: 16px;
+  margin-left: 16px;
+}
