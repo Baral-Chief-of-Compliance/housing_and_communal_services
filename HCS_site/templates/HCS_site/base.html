@@ -100,7 +100,53 @@
       <a href="{% url 'announcements_list' %}">Объявления</a>
       <a href="{% url 'complaint' %}">Оставить заявку</a>
     </div>
-
-{% block content %}
-{% endblock %}
+<div class="wrapper">
+  <div class="content">
+    <div>
+      {% block content %}
+      {% endblock %}
+    </div>
+  </div>
+  <div class="footer">
+    <div class="footer-information">
+      <div class="footer-logo">
+        <div class="footer-img">
+          <img src="{% static 'HCS_site/img/img_for_footer.jpg' %}">
+        </div>
+        <div class="footer-root">
+          © 2022 / ООО «УК ЖКХ Октябрьского района»<br>
+          Политика конфиденциальности
+        </div>
+      </div>
+      <div class="footer-links">
+        <a href="{% url 'index' %}">Главная</a>
+        <a href="{% url 'about' %}">О нас</a>
+        <a href="{% url 'news_list' %}">Новости</a>
+        <a href="{% url 'announcements_list' %}">Объявления</a>
+      </div>
+      <div class="footer-numbers">
+        <div class="footer-title">
+          Офис
+        </div>
+        <div class="footer-number">
+          +7(666)666-66-60
+        </div>
+        <div class="footer-title">
+          Аварийная служба
+        </div>
+        <div class="footer-number">
+          +7(148)814-88-00
+        </div>
+      </div>
+      <div class="footer-icons">
+        <div class="title-icons">
+          Поделиться:
+        </div>
+        <div class="icons">
+          <a href="https://vk.com/bakuntsev"><img src="{% static 'HCS_site/img/social_icons.jpg' %}"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 </body>
