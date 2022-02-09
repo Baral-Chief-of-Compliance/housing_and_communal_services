@@ -1,23 +1,59 @@
 {% extends 'HCS_site/base.html' %}
-
+{% load static %}
 
 {% block content %}
 
-<h1>Описание новости</h1>
+<div class="news-content">
+  <div class="news-logo">
+    {{object.name_of_news}}
+  </div>
+  <div class="news-way">
+    <a href="{% url 'index' %}">Главная</a> » <a href="{% url 'news_list'%}">Новости</a> » {{object.name_of_news}}
+  </div>
+  <div class="news-block">
+      <img src="{% static 'HCS_site/img/for_one_news.jpg' %}"/>
+      <div class="news-information">
+        <div class="date-of-one-news">
+          {{ object.date_of_news }}
+        </div>
+        <div class="news-text">
+          {{ object.text_of_news}}
+        </div>
+      </div>
+  </div>
+  <div class="line-news"></div>
+  <div class="announcement-back">
+    <a href="{% url 'news_list'%}">Назад</a>
+  </div>
+<div class="news-comment">
+  Комментарии:
+</div>
 
-{{object.name_of_news}}
-
-<h2>Комментарии:</h2>
 {% for comment in object.comments_set.all %}
-
-{{ comment.name_of_commenter }}
-
+<div class="news-block">
+  <img src="{% static 'HCS_site/img/icon_for_comment.png' %}"/>
+  <div class="news-information">
+    <div class="comment-profile">
+      <div class="name-commentors">
+        {{ comment.name_of_commenter }}
+      </div>
+      <div class="date-of-comment">
+        {{ comment.date_of_comment }}
+      </div>
+    </div>
+    <div class="news-text">
+      {{ comment.text_of_comment}}
+    </div>
+  </div>
+</div>
 {% endfor %}
-<form action = "{% url 'add_comment' object.id %}" method="post">
-  {% csrf_token %}
-  <input type="text" placeholder="Ваше имя" name = "name_of_commenter"><br>
-  <input type="text" placeholder="Ваш комментарий" name = "text_of_comment">
-  <button type="submit" value="Отправить">OK</button>
-</form>
-
+<div class="comments-form">
+  <form  action = "{% url 'add_comment' object.id %}" method="post">
+    {% csrf_token %}
+    <input class="size-name-of-commenter" type="text" placeholder="Ваше имя" name = "name_of_commenter"><br>
+    <input class = "size-text-of-commenter" type="text" placeholder="Ваш комментарий" name = "text_of_comment"><br>
+    <button class = "size-button-comments" type="submit" value="Отправить">Добавить комментарий</button>
+  </form>
+</div>
+</div>
 {% endblock %}

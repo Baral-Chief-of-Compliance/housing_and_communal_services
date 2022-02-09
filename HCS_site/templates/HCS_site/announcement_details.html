@@ -2,9 +2,19 @@
 
 
 {% block content %}
-
-<h1>Описание объявления</h1>
-
-{{object.name_of_announcement}}
-
+<div class="news-content">
+  <div class="news-logo">
+    {{object.name_of_announcement}}
+  </div>
+  <div class="news-way">
+    <a href="{% url 'index' %}">Главная</a> » <a href="{% url 'announcements_list'%}">Объявления</a> » {{object.name_of_announcement}}
+  </div>
+  <div class="news-block">
+      <img src="{{ object.image_of_announcement.url }}"/>
+  </div>
+  <div class="line-news"></div>
+  <div class="announcement-back">
+    <a href="{% url 'announcements_list'%}">Назад</a>
+  </div>
+</div>
 {% endblock %}

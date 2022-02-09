@@ -2,12 +2,28 @@
 
 
 {% block content %}
+<div class="news-content">
+  <div class="news-logo">
+    Объявления
+  </div>
+  <div class="news-way">
+      <a href="{% url 'index' %}">Главная</a> » Объявления
+  </div>
 
-<h1>Объявления</h1>
-{% for announcement in object_list %}
+  {% for announcement in object_list %}
+  <div class="news-block">
+    <img class="announcement-img" src="{{ announcement.image_of_announcement.url }}"/>
+    <div class="news-information">
+      <div class="name-of-news">
+        <a href = "{{announcement.id}}/">{{announcement.name_of_announcement}}</a>
+      </div>
+      <div class="news-more">
+        <a href="{{announcement.id}}/">Подробнее »</a>
+      </div>
+    </div>
+  </div>
+  <div class="line-news"></div>
+  {% endfor %}
 
-<a href = "{{announcement.id}}/">{{announcement.name_of_announcement}}</a>
-
-{% endfor %}
-
+</div>
 {% endblock %}
