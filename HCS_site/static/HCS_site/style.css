@@ -189,3 +189,73 @@ html,body{
 .header-navigation a:hover{
     text-decoration: underline;
 }
+
+.news-content{
+  margin-left: 28%;
+  margin-right: 28%;
+  margin-top: 40px;
+}
+
+
+.line-news{
+  border-bottom: 1px solid #e0e0e0;
+	margin: 25px 0px 25px 0px
+}
+
+.news-block{
+  display: flex;
+  flex-direction: row;
+  margin-top: 40px;
+}
+
+.news-information{
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+}
+
+
+.name-of-news a{
+  text-decoration: none;
+  color: #000000;
+  padding-left: 30px;
+  font-weight: bold;
+}
+
+
+.name-of-news a:hover{
+  text-decoration: underline;
+}
+
+
+.date-of-news{
+  padding-left: 30px;
+  padding-top: 20px;
+}
+
+
+.news-more{
+  padding-left: 30px;
+  padding-top: 30px;
+
+}
+
+.news-more a{
+  text-decoration: none;
+  color: #696969;
+  font-size: 12px;
+}
+
+.news-more a:hover{
+  text-decoration: underline;
+}
+
+.news-logo{
+  font-size: 38px;
+  margin-bottom: 20px;
+}
+
+.news-way a{
+  text-decoration: none;
+  color: #0082cc;
+}
