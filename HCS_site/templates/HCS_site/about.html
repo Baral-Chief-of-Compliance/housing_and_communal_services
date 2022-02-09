@@ -2,7 +2,16 @@
 
 
 {% block content %}
-
-<h1>О нас</h1>
-
+<div class="news-content">
+  <div class="news-logo">
+    О нас
+  </div>
+  <div class="news-way">
+    <a href="{% url 'index' %}">Главная</a> » О нас
+  </div>
+  <h2 class = "about-inf">Общая информация</h2>
+  <div class="news-block">
+    Здесь должна распологаться информация о компании
+  </div>
+</div>
 {% endblock %}

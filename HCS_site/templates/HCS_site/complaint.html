@@ -2,15 +2,20 @@
 
 
 {% block content %}
-
-<h1>Отправить заявку/жалобу</h1>
-
-<form action = "{% url 'add_complaint' %}" method="post">
-  {% csrf_token %}
-  <input type="text" placeholder="Ваш адресс" name = "address_of_complaint"><br>
-  <input type="text" placeholder="Текст жалобы/заявки" name = "text_of_complaint">
-  <button type="submit" value="Отправить">OK</button>
-</form>
-
-
+<div class="news-content">
+  <div class="news-logo">
+    Отправить заявку/жалобу
+  </div>
+  <div class="news-way">
+    <a href="{% url 'index' %}">Главная</a> » Оставить заявку
+  </div>
+  <div class="news-block">
+      <form action = "{% url 'add_complaint' %}" method="post">
+        {% csrf_token %}
+        <input class="size-name-of-commenter" type="text" placeholder="Ваш адресс" name = "address_of_complaint"><br>
+        <input class = "size-text-of-commenter" type="text" placeholder="Текст жалобы/заявки" name = "text_of_complaint"><br>
+        <button class = "size-button-comments" type="submit" value="Отправить">Отправить заявку</button>
+      </form>
+  </div>
+</div>
 {% endblock %}
