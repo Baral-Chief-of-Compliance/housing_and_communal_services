@@ -339,3 +339,32 @@ html,body{
 	text-align: center;
 	margin-top: 45px;
 }
+
+.index-block-style{
+	display: flex;
+	flex-direction: column;
+	padding: 30px 22px 55px 22px;
+	margin-right: 71%;
+	text-align: center;
+	border: 1px solid #e0e0e0;
+	border-top: 3px solid #0082cc;
+}
+
+
+.index-block-title{
+	color: #0082cc;
+	padding-top: 25px;
+}
+
+.index-block-discribe{
+	color: #696969;
+	padding-top: 25px;
+}
+
+.index-links {
+	text-decoration: none;
+}
+
+.index-block-style:hover{
+	border-top: 3px solid red;
+}
