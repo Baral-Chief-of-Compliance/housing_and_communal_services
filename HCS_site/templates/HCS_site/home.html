@@ -2,21 +2,58 @@
 {% load static %}
 
 {% block content %}
-<div class="news-content">
+<div class="index-content">
   <div class="news-logo">
     Главная страница
   </div>
-  <a class = "index-links" href="#"><div class="index-block-style">
-    <div class="index-block-img">
-      <img src="{% static 'HCS_site/img/1_block.jpg' %}"/>
-    </div>
-    <div class="index-block-title">
-      Многоквартирные дома в управлении
-    </div>
-    <div class="index-block-discribe">
-      Реестр домов, находящихся в данный момент в управлении
-    </div>
-  </div></a>
+  <div class="blocks-row">
+
+    <a class = "index-links" href="#"><div class="index-block-style">
+      <div class="index-block-img">
+        <img src="{% static 'HCS_site/img/1_block.jpg' %}"/>
+      </div>
+      <div class="index-block-title">
+        Многоквартирные дома в управлении
+      </div>
+      <div class="index-block-discribe">
+        Реестр домов, находящихся в данный момент в управлении
+      </div>
+    </div></a>
+    <a class = "index-links" href="#"><div class="index-block-style">
+      <div class="index-block-img">
+        <img src="{% static 'HCS_site/img/2_block.jpg' %}"/>
+      </div>
+      <div class="index-block-title">
+        Раскрытие информации
+      </div>
+      <div class="index-block-discribe">
+        Раскрытие информации согласно 731 Постановлению Правительства РФ
+      </div>
+    </div></a>
+    <a class = "index-links" href="#"><div class="index-block-style">
+      <div class="index-block-img">
+        <img src="{% static 'HCS_site/img/3_block.jpg' %}"/>
+      </div>
+      <div class="index-block-title">
+        Бланки и документы
+      </div>
+      <div class="index-block-discribe">
+        Шаблон договора на управление МКД и другие
+      </div>
+    </div></a>
+    <a class = "index-links" href="#"><div class="index-block-style">
+      <div class="index-block-img">
+        <img src="{% static 'HCS_site/img/4_block.jpg' %}"/>
+      </div>
+      <div class="index-block-title">
+        Контакты
+      </div>
+      <div class="index-block-discribe">
+        Контактная информация
+      </div>
+    </div></a>
+
+  </div>
   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1433.2182934490197!2d33.09586721649618!3d68.94776401298705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x44340fe8ee3d62a5%3A0xa19d6e4aa1f7d656!2z0L_RgNC-0YHQvy4g0JrQvtC70YzRgdC60LjQuSwgMTIsINCc0YPRgNC80LDQvdGB0LosINCc0YPRgNC80LDQvdGB0LrQsNGPINC-0LHQuy4sIDE4MzAzMg!5e0!3m2!1sru!2sru!4v1644438474189!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
 </div>
 {% endblock %}

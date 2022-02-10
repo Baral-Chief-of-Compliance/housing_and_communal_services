@@ -344,7 +344,8 @@ html,body{
 	display: flex;
 	flex-direction: column;
 	padding: 30px 22px 55px 22px;
-	margin-right: 71%;
+	margin-right: 15px;
+	margin-left: 15px;
 	text-align: center;
 	border: 1px solid #e0e0e0;
 	border-top: 3px solid #0082cc;
@@ -367,4 +368,18 @@ html,body{
 
 .index-block-style:hover{
 	border-top: 3px solid red;
+}
+
+
+.blocks-row{
+	display: flex;
+	flex-direction: row;
+}
+
+
+.index-content{
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 40px;
+	margin-bottom: 40px;
 }
