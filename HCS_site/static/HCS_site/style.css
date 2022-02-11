@@ -355,6 +355,8 @@ html,body{
 .index-block-title{
 	color: #0082cc;
 	padding-top: 25px;
+	height: 41px;
+	width: 221px;
 }
 
 .index-block-discribe{
@@ -384,4 +386,65 @@ html,body{
   margin-right: 20%;
   margin-top: 40px;
 	margin-bottom: 40px;
+}
+
+
+.slider-img{
+	height : 460px;
+  width : 840px;
+  object-fit: cover;
+	object-position: 50% 50%;
+}
+
+.slider-line{
+	height: 460px;
+	width: 3360px;
+	display: flex;
+	position: relative;
+	left: 0;
+	transition: all ease 1s;
+}
+.slider{
+	width: 840px;
+	height: 460px;
+	margin: 30px auto;
+	overflow: hidden;
+}
+
+.container-line{
+	display: flex;
+	flex-direction: row;
+	margin-left: 88px;
+	margin-bottom: 20px;
+}
+
+
+.slider-prev{
+		width: 0;
+		height: 0;
+		border-top: 30px solid transparent;
+		border-bottom: 30px solid transparent;
+		border-right: 50px solid #0082cc;
+		background: white;
+		border-left: white;
+		margin-right: 10px;
+		margin-top: 205px;
+	}
+
+	.slider-next{
+		width: 0;
+		height: 0;
+		border-top: 30px solid transparent;
+		border-bottom: 30px solid transparent;
+		border-left: 50px solid #0082cc;
+		background: white;
+		border-right: white;
+		margin-left: 10px;
+		margin-top: 205px;
+	}
+
+
+.map-index{
+	margin-top: 50px;
+	text-align: center;
 }

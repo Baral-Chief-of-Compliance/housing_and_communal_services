@@ -1,10 +1,29 @@
 {% extends 'HCS_site/base.html' %}
 {% load static %}
 
+
+{% block title %}
+
+ООО УК ЖКХ Октябрьского района
+
+{% endblock %}
+
+
 {% block content %}
 <div class="index-content">
-  <div class="news-logo">
-    Главная страница
+  <div class="container-line">
+  <button class = 'slider-prev'></button>
+    <div class="container">
+      <div class="slider">
+        <div class="slider-line">
+          <img class = 'slider-img' src="{% static 'HCS_site/img/1_slider.jpg' %}" alt="1 картинка слайдера">
+          <img class = 'slider-img' src="{% static 'HCS_site/img/2_slider.jpg' %}" alt="2 картинка слайдера">
+          <img class = 'slider-img' src="{% static 'HCS_site/img/3_slider.jpg' %}" alt="3 картинка слайдера">
+          <img class = 'slider-img' src="{% static 'HCS_site/img/4_slider.jpg' %}" alt="4 картинка слайдера">
+        </div>
+      </div>
+    </div>
+  <button class = 'slider-next'></button>
   </div>
   <div class="blocks-row">
 
@@ -54,6 +73,9 @@
     </div></a>
 
   </div>
-  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1433.2182934490197!2d33.09586721649618!3d68.94776401298705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x44340fe8ee3d62a5%3A0xa19d6e4aa1f7d656!2z0L_RgNC-0YHQvy4g0JrQvtC70YzRgdC60LjQuSwgMTIsINCc0YPRgNC80LDQvdGB0LosINCc0YPRgNC80LDQvdGB0LrQsNGPINC-0LHQuy4sIDE4MzAzMg!5e0!3m2!1sru!2sru!4v1644438474189!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  <div class="map-index">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1433.2182934490197!2d33.09586721649618!3d68.94776401298705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x44340fe8ee3d62a5%3A0xa19d6e4aa1f7d656!2z0L_RgNC-0YHQvy4g0JrQvtC70YzRgdC60LjQuSwgMTIsINCc0YPRgNC80LDQvdGB0LosINCc0YPRgNC80LDQvdGB0LrQsNGPINC-0LHQuy4sIDE4MzAzMg!5e0!3m2!1sru!2sru!4v1644438474189!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  </div>
+
 </div>
 {% endblock %}

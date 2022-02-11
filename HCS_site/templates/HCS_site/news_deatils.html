@@ -1,6 +1,14 @@
 {% extends 'HCS_site/base.html' %}
 {% load static %}
 
+
+{% block title %}
+
+{{object.name_of_news}}
+
+{% endblock %}
+
+
 {% block content %}
 
 <div class="news-content">
@@ -47,7 +55,7 @@
   </div>
 </div>
 {% endfor %}
-<div class="comments-form">
+
   <form  action = "{% url 'add_comment' object.id %}" method="post">
     {% csrf_token %}
     <input class="size-name-of-commenter" type="text" placeholder="Ваше имя" name = "name_of_commenter"><br>
