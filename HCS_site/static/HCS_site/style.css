@@ -448,3 +448,186 @@ html,body{
 	margin-top: 50px;
 	text-align: center;
 }
+
+
+.icon{
+	display: none;
+}
+
+.icon-name{
+	display: none;
+}
+
+
+	.header-navigation-responsive{
+		background-color: #0082cc;
+	  text-align: center;
+	 	display: flex;
+		flex-direction: column;
+	}
+
+	.header-navigation-responsive a{
+	  color: #ffffff;
+	  text-decoration: none;
+	  font-weight: bold;
+	  margin-right: 16px;
+	  margin-left: 16px;
+	  font-size: 13px;
+		padding: 20px;
+	}
+
+
+	.header-navigation-responsive a:hover{
+	    text-decoration: underline;
+	}
+
+	.header-navigation-responsive .icon-name{
+		display: none;
+	}
+@media screen and (max-width: 1500px){
+	.container-line{
+		display: none;
+	}
+
+	.blocks-row{
+		flex-direction: column;
+	}
+
+	.map-index{
+		display: none;
+	}
+
+	.index-block-title{
+		margin-left: 35%;
+	}
+
+	.index-block-discribe{
+		margin-left: 35%;
+	}
+}
+
+
+@media screen and (max-width: 1400px){
+	.footer-information{
+	  display: flex;
+		flex-direction: column;
+	}
+
+	.footer-logo{
+		margin-left: 40%;
+	}
+
+	.footer-links{
+		padding-top: 30px;
+		margin-left: 40%;
+	}
+	.footer-numbers{
+		padding-top: 30px;
+		margin-left: 40%;
+	}
+	.footer-icons{
+		padding-top: 30px;
+		margin-left: 40%;
+	}
+}
+
+@media screen and (max-width: 1200px){
+
+	.information-header{
+		flex-direction: column;
+		margin-left: 35%;
+	}
+
+	.information-header-imag{
+		margin-left: 15%;
+		margin-bottom: 20px;
+	}
+
+	.information-header-address{
+		margin-left: 12%;
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+
+	.index-block-title{
+		margin-left: 30%;
+	}
+
+	.index-block-discribe{
+		margin-left: 30%;
+	}
+
+	@media screen and (max-width: 1000px){
+
+		.information-header{
+			flex-direction: column;
+			margin-left: 30%;
+		}
+
+		.index-block-title{
+			margin-left: 25%;
+		}
+
+		.index-block-discribe{
+			margin-left: 25%;
+		}
+
+	@media screen and (max-width: 750px){
+
+			.information-header{
+				flex-direction: column;
+				margin-left: 20%;
+		}
+
+		.index-block-title{
+			margin-left: 20%;
+		}
+
+		.index-block-discribe{
+			margin-left: 20%;
+		}
+
+	@media screen and (max-width: 600px){
+		.header-navigation a{
+			display: none;
+		}
+
+		.index-block-title{
+			margin-left: 15%;
+		}
+
+		.index-block-discribe{
+			margin-left: 15%;
+		}
+
+		.header-navigation a.icon{
+			display: block;
+			font-size: 30px;
+			padding-left: 70%;
+		}
+
+		.icon-name{
+			display: block;
+			padding-top: 10px;
+			color: white;
+			padding-left: 5%;
+		}
+
+
+		.display-menu{
+			display: flex;
+			flex-direction: row;
+		}
+
+	}
+
+	@media screen and (max-width: 550px){
+		.index-block-discribe{
+			margin-left: 2%;
+		}
+		.index-block-title{
+			margin-left: 2%;
+		}
+	}
+
+}

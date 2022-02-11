@@ -93,12 +93,16 @@
         </div>
       </div>
     </div>
-    <div class="header-navigation">
+    <div class="header-navigation" id = "myTopnav">
       <a href="{% url 'index' %}">Главная</a>
       <a href="{% url 'about' %}">О нас</a>
       <a href="{% url 'news_list' %}">Новости</a>
       <a href="{% url 'announcements_list' %}">Объявления</a>
       <a href="{% url 'complaint' %}">Оставить заявку</a>
+			<div class="display-menu">
+				<div class = "icon-name">Меню</div>
+				<a href = "#" id="menu" class="icon">&#9776;</a>
+			</div>
     </div>
 <div class="wrapper">
   <div class="content">
@@ -151,4 +155,5 @@
   </div>
 </div>
 <script type="text/javascript" src={% static "HCS_site/slider.js" %}></script>
+<script type="text/javascript" src={% static "HCS_site/style.js" %}></script>
 </body>
